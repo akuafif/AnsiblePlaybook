@@ -1,0 +1,9 @@
+---
+- hosts: all
+  tasks:
+    - name: Ping server
+      ping:
+      register: ping_result
+    - name: Ping result
+      debug:
+        msg: "Ping result: {{ ping_result }}"
